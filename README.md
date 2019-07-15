@@ -9,7 +9,11 @@ The following libsvm parallelizing patch is applied.
 ```bash
 docker build -t local/libsvm .
 docker run -it --rm -v $(pwd):/code -w /code local/libsvm sh
+```
 
+## Inside the docker
+
+```
 $ type train svm-train
 train is a tracked alias for /usr/local/bin/train
 svm-train is a tracked alias for /usr/local/bin/svm-train
@@ -48,6 +52,9 @@ options:
 ## Parallelizing libsvm example
 
 ```bash
+$
+$ mdir example
+$ cd example
 $ wget 'http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/ijcnn1.bz2'
 $ bzip2 -d ijcnn1.bz2
 
